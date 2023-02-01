@@ -1299,85 +1299,6 @@ section {
   font-size: 14px;
 }
 
-/*--------------------------------------------------------------
-# Our Team Section
---------------------------------------------------------------*/
-.team .member {
-  position: relative;
-}
-
-.team .member .member-img {
-  margin: 0 80px;
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative;
-}
-
-@media (max-width: 1024px) {
-  .team .member .member-img {
-    margin: 0 60px;
-  }
-}
-
-.team .member .member-img img {
-  position: relative;
-  z-index: 1;
-}
-
-.team .member .member-img .social {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-  padding-bottom: 20px;
-  transition: 0.3s;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.team .member .member-img .social a {
-  transition: 0.3s;
-  color: #fff;
-  font-size: 20px;
-  margin: 0 8px;
-}
-
-.team .member .member-img .social a:hover {
-  color: var(--color-primary);
-}
-
-.team .member .member-info {
-  margin-top: 30px;
-}
-
-.team .member .member-info h4 {
-  font-weight: 700;
-  margin-bottom: 6px;
-  font-size: 18px;
-  color: var(--color-secondary);
-}
-
-.team .member .member-info span {
-  font-style: italic;
-  display: block;
-  font-size: 15px;
-  color: #838893;
-  margin-bottom: 10px;
-}
-
-.team .member .member-info p {
-  margin-bottom: 0;
-  font-size: 14px;
-}
-
-.team .member:hover .member-img .social {
-  padding-bottom: 0;
-  visibility: visible;
-  opacity: 1;
-}
 
 /*--------------------------------------------------------------
 # Servie Cards Section
@@ -2678,4 +2599,125 @@ section {
 
 .footer .footer-legal .credits a {
   color: var(--color-primary);
+}
+
+/* Team area */
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.team {
+  background: #fff;
+  padding: 60px 0;
+}
+
+.team .member {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team .member .member-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.team .member .social {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  right: 0;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  text-align: center;
+}
+
+.team .member .social a {
+  transition: color 0.3s;
+  color: #151515;
+  margin: 0 3px;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: ease-in-out 0.3s;
+  color: #484848;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team .member .social a:hover {
+  color: #151515;
+  background: #ffc451;
+}
+
+.team .member .social i {
+  font-size: 18px;
+  line-height: 0;
+}
+
+.team .member .member-info {
+  padding: 25px 15px;
+}
+
+.team .member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #151515;
+}
+
+.team .member .member-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #aaaaaa;
+}
+
+.team .member .member-info p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #777777;
+}
+
+.team .member:hover .social {
+  opacity: 1;
+  bottom: 15px;
+}
+.section-title {
+  padding-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 5px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  display: inline-block;
+  background: var(--color-primary);
+  margin: 4px 10px;
+}
+
+.section-title p {
+  margin: 0;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #151515;
 }
