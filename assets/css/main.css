@@ -2609,7 +2609,9 @@ section {
   background: #fff;
   padding: 60px 0;
 }
-
+.team .row{
+  justify-content: center;
+}
 .team .member {
   margin-bottom: 20px;
   overflow: hidden;
@@ -2717,7 +2719,6 @@ section {
   margin: 0;
   font-size: 36px;
   font-weight: 700;
-  text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #151515;
 }
