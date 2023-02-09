@@ -36,6 +36,7 @@
 <body>
 
   <!-- ======= Header ======= -->
+
   <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
@@ -71,7 +72,7 @@
               Nossos barbeiros são altamente treinados e usam apenas os melhores produtos de cuidado de barba e cabelo
               para garantir um resultado impecável. Agende sua sessão hoje e experimente o verdadeiro cuidado com o
               estilo masculino!</p>
-            <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Fazer um
+            <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started popup-trigger">Fazer um
               agendamento</a>
           </div>
         </div>
@@ -309,7 +310,14 @@
           </div>
 
   </footer>
-  <!-- End Footer -->
+  <div class="popup">
+    <div class="popup__content">
+      <div class="popup__body">
+        <button class="popup__close" type="button"></button>
+        <div class="popup__text">Thanks for the click!</div>
+      </div>
+    </div>
+  </div>
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
@@ -317,6 +325,7 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
+  <script src="assets/js/show-popup.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
