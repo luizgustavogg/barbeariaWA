@@ -4,7 +4,7 @@ const popupClose = document.querySelector('.popup__close');
 
 popupTrigger.addEventListener('click', (e) => {
   popup.classList.add('show');
-  document.body.style.cssText = `overflow: hidden;`;
+  document.body.style.cssText = `overflow: hidden`;
 
 });
 
