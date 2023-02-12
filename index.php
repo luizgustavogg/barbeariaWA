@@ -1,5 +1,9 @@
+<?php
+  include_once('include/include.php');
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="utf-8">
@@ -72,7 +76,7 @@
               Nossos barbeiros são altamente treinados e usam apenas os melhores produtos de cuidado de barba e cabelo
               para garantir um resultado impecável. Agende sua sessão hoje e experimente o verdadeiro cuidado com o
               estilo masculino!</p>
-            <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started popup-trigger">Fazer
+            <a data-aos="fade-up" data-aos-delay="200" class="btn-get-started popup-trigger">Fazer
               um
               agendamento</a>
           </div>
@@ -322,20 +326,36 @@
             <!-- <p>Consulte a nossos profissionais</p> -->
           </div>
           <div class="poup-form">
+            <form action="">
+              <div class="errortxt"></div>
             <div class="poup-inputs">
               <input type="text" name="nome" placeholder="Nome">
-              <input type="text" name="numero" placeholder="Número do Whatsapp">
-              <select name="" id="">
-                <option value="">Horario: 16h00</option>
-                <option value="">Horario: 16h00</option>
-                <option value="">Horario: 16h00</option>
-                <option value="">Horario: 16h00</option>
-                <option value="">Horario: 16h00</option>
-                <option value="">Horario: 16h00</option>
-              </select>
+              <input type="tel" name="numero" placeholder="Número do Whatsapp" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}">
+             
+                <select
+                  class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:focus:shadow-outline-gray"
+                  name="id_categoria" id="id_categoria"
+                >
+                <option value="">Escolha o Funcionario</option>
+                    <?php
+                      $result_cat_post = "SELECT * FROM funcionarios ORDER BY nome";
+                      $resultado_cat_post = mysqli_query($conn, $result_cat_post);
+                      while($row_cat_post = mysqli_fetch_assoc($resultado_cat_post) ) {
+                        echo '<option value="'.$row_cat_post['idFunc'].'">'.$row_cat_post['nome'].'</option>';
+                      }
+                    ?>
+                </select>
+
+                <select
+                  class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:focus:shadow-outline-gray"
+                  name="id_sub_categoria" id="id_sub_categoria"
+                >
+                <option value="">Escolha Horario</option>
+                </select>
             </div>
             <button class="popup-button-form">Enviar</button>
           </div>
+        </form>
         </div>
       </div>
     </div>
@@ -354,11 +374,12 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+	<script src="assets/js/agendar.js"></script>
+	<script src="assets/js/select.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+		
 </body>
 
 </html>

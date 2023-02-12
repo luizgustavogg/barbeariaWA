@@ -2847,6 +2847,10 @@ section {
 }
 
 .popup-button-form{
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-primary);
   font-weight: 500;
   font-size: 16px;
@@ -2863,3 +2867,24 @@ section {
   width: 300px;
   
 }
+
+@media( min-width: 800px){
+	.errortxt{
+		max-width: 370px;
+	}
+}
+.errortxt{
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  justify-content: center;
+	background-color: rgb(255, 156, 156);
+	padding: 10px;
+	text-align: center;
+	border-radius: 3px;
+	border: 1px solid rgb(184, 99, 99);
+	color: rgb(169, 58, 58);
+	display: none; 
+  margin: 0 auto;
+  margin-bottom: 20px;
+  }
